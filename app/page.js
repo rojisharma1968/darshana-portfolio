@@ -64,7 +64,7 @@ const HomePage = () => {
               Strong UI/UX sense
             </span>
             <span className="capitalize animate-bounce-fast duration-250 absolute right-0 top-20 bg-yellow-300/20 py-1 mt-5 px-2 rounded-sm inline-block text-sm border-[1px] border-yellow-500/20 text-yellow-500">
-              Otimized Code
+              Optimized Code
             </span>
             <span className="capitalize animate-bounce duration-250 absolute left-40 md:left-1/2 -bottom-8 md:bottom-3 lg:-bottom-10 bg-indigo-300/20 py-1 mt-5 px-2 rounded-sm inline-block text-sm border-[1px] border-indigo-500/20 text-indigo-500">
               Scalability
