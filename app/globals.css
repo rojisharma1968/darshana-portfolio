@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --card-gradient: 180deg, rgba(190, 188, 188, 0) 0%,
+    rgba(4, 4, 4, 0.7147233893557423) 76%;
+}
+
+@layer utilities {
+  @keyframes bounceCustom {
+    0%,
+    100% {
+      transform: translateY(-10%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(10%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  .animate-bounce {
+    animation: bounceCustom 1s infinite;
+  }
+
+  .animate-bounce-fast {
+    animation: bounceCustom 0.5s infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounceCustom 2s infinite;
+  }
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: local("Josefin Sans Bold"), local("JosefinSans-Bold"),
+    url("/font/JosefinSans-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: local("Josefin Sans SemiBold"), local("JosefinSans-SemiBold"),
+    url("/font/JosefinSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: local("Josefin Sans Regular"), local("JosefinSans-Regular"),
+    url("/font/JosefinSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: local("Josefin Sans Medium"), local("JosefinSans-Medium"),
+    url("/font/JosefinSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  @apply bg-zinc-900 text-white;
+}
+
+.text-gradient {
+  background: linear-gradient(#5ea9f3, #3ccea4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.project-menu {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media screen and (max-width: 480px) {
+  .Toastify__toast {
+    @apply w-[95%];
+  }
+}
